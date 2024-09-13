@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Adjust file permissions
+chown dsf:dsf /opt/dsf/sd/firmware/*.bin
+chown dsf:dsf /opt/dsf/sd/firmware/*.uf2
+
+# Instruct DuetControlServer to update the firmware
+/opt/dsf/bin/DuetControlServer -u
+
+exit 0
