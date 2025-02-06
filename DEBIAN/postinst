@@ -4,6 +4,9 @@
 chown dsf:dsf /opt/dsf/sd/firmware/*.bin
 chown dsf:dsf /opt/dsf/sd/firmware/*.uf2
 
+# Wait for pending IO to finish
+sync
+
 # Instruct DuetControlServer to update the firmware
 /opt/dsf/bin/DuetControlServer -u
 
